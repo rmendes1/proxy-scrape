@@ -1,0 +1,22 @@
+{% extends 'proxy_scrape/base.html' %}
+{% block title %} Proxy Form {% endblock %}
+{% block main %} 
+
+<form method = "POST">
+{% csrf_token %}
+<h2>Proxy Items</h2>
+{% for field in form %}
+<div>
+    <div class = "form-group row">
+        <label for = "colFormLabelSm"class = "col-sm-2 col-form-label">{{ field.label }}</label>
+        {{field}}
+        <small style = "color: red">{{field.errors}}</small>
+    </div class = "col-sm-10">
+{% endfor %}
+</div>
+</form>
+
+ <button class = "btn btn-primary">Submit</button>
+<button class = "btn btn-secondary" href = "{{back_url}}">Back</button>
+</form>
+{% endblock %}

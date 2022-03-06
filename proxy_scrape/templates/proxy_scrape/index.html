@@ -1,0 +1,15 @@
+{% extends "proxy_scrape/base.html" %} 
+{% load django_tables2 %}
+{% block title %}Proxy Table v1.0{% endblock %}
+{% block main %}
+
+<a class="btn btn-success" href = "{% url 'add-item' %}">Add new item</a>
+{% render_table table %}
+{% endblock %}
+
+
+
+{% block extra %}
+
+{% endblock %}
+
