@@ -1,2 +1,2 @@
-web:gunicorn jobs.wsgi
+web:gunicorn proxy_django.wsgi
 release:python manage.py migrate
