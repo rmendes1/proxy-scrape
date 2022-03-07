@@ -22,6 +22,7 @@
  • <a href="#scraping">Scraping</a> </br>
   • <a href="#cleaning-data">Cleaning Data</a> </br>
  • <a href="#pages">Pages</a> </br>
+ • <a href="#local">Local</a> </br>
  • <a href="#deploy">Deploy</a> </br>	
  • <a href="#next-steps">Next Steps</a> </br>
  • <a href="#license">License</a>
@@ -99,6 +100,55 @@ a forms to add/update new pieces of information to it. It is also possible to or
 <p align = "center"> Image 5 - Forms (UPDATE) </p>
 <p align = "center"> <img src="/imgs/forms_update.png" />  </p>
 
+# **Local**
+
+To run it locally in your machine, type the following in the terminal:
+
+Clone the project
+```
+> git clone <p>https://github.com/rmendes1/proxy-scrape.git</p>
+```
+Install the dependencies
+```
+> pip install requirements.txt
+```
+Setup your virtual environment
+```
+> python -m venv <venv_name>
+> source env/bin/activate
+```
+Obtain a secret from <a href = "https://miniwebtool.com/django-secret-key-generator/#">MiniWebTool</a> and add to secrets.sh
+```
+export SECRET_KEY='<secret_key>'
+```
+Then run
+```
+python manage.py migrate
+```
+Create a superuser
+```
+python manage.py createsuperuser
+```
+then
+```
+python manage.py makemigrations <app_name>
+```
+to makemigrations for the app
+
+then again run
+```
+python manage.py migrate
+```
+to start the development server
+```
+python manage.py runserver
+```
+and open localhost:8000 on your browser to view the app.
+
+To run the scraping, execute
+```
+python manage.py scrape_commands
+```
 
 # **Deploy**
 <a href="https://proxy-scrape.herokuapp.com/proxy/">
