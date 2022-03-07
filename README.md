@@ -38,7 +38,7 @@ proxy site and create a Django application with it, allowing the user to create,
 ![Python](https://img.shields.io/badge/-Python-007396?style=flat-square&logo=python&logoColor=ffffff)
 ![Django](https://img.shields.io/badge/-Django-013220?style=flat-square&logo=Django&logoColor=ffffff)
 ![HTML](https://img.shields.io/badge/HTML-FFA500?style=flat-square&logo=html&logoColor=ffffff)
-![CSS](https://img.shields.io/badge/-CSS-A81D33?style=flat-square&logo=css&logoColor=ffffff)
+![Bootstrap](https://img.shields.io/badge/-Bootstrap-A81D33?style=flat-square&logo=bootstrap&logoColor=ffffff)
 ![Heroku](https://img.shields.io/badge/-Heroku-800080?style=flat-square&logo=heroku&logoColor=ffffff)
 
 # **Steps**
@@ -74,7 +74,7 @@ as Pandas can get this job done by itself with <code class="lo lp lq lr ls b">pa
 BeautifulSoup and Urllib to return a list containing all the tables in a page as DataFrames. You just need to pass the URL of the page.
 After the extraction, the data is saved in a data frame and transformed into a SQL table.
 
-This function is set inside Django application in (PATH).
+This function is set inside Django application <a href = 'https://github.com/rmendes1/proxy-scrape/blob/main/proxy_scrape/management/commands/scrape_commands.py'>here</a>.
 
 # **Cleaning Data**
 Inside the table, the IP Address came as an encoded value, so it was necessary to decode and clean it. The correct strings were extracted from
@@ -110,7 +110,7 @@ Clone the project
 ```
 Install the dependencies
 ```
-> pip install requirements.txt
+> pip install -r requirements.txt
 ```
 Setup your virtual environment
 ```
