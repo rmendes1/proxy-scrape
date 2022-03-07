@@ -132,6 +132,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-HEROKU_API_KEY = os.environ("HEROKU_API_KEY")
 
 django_heroku.settings(locals())
