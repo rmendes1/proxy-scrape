@@ -106,7 +106,7 @@ To run it locally in your machine, type the following in the terminal:
 
 Clone the project
 ```
-> git clone <p>https://github.com/rmendes1/proxy-scrape.git</p>
+> git clone https://github.com/rmendes1/proxy-scrape.git
 ```
 Install the dependencies
 ```
