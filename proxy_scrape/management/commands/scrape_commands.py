@@ -6,6 +6,7 @@ import sqlalchemy
 import base64
 import subprocess
 
+
 class Command(BaseCommand):
     help = "collect jobs"
     # define logic of command
@@ -23,7 +24,7 @@ class Command(BaseCommand):
         df_final.columns = ['ip', 'port', 'protocol', 'country', 'region', 'city', 'anonymity', 'speed', 'uptime', 'response', 'last_checked']
 
         HEROKU_APP_NAME = "scrape-proxy"
-        conn_info = subprocess.run(["heroku", "config:get", "DATABASE_URL", "--a", HEROKU_APP_NAME], stdout = subprocess.PIPE) # capture_output arg is added in Python 3.7
-        conn_uri = conn_info.stdout.decode('utf-8').strip()
+        conn_info = subprocess.run(["heroku", "config:get", "DATABASE_URL", "--a", HEROKU_APP_NAME], capture_output=True).stdout # capture_output arg is added in Python 3.7
+        conn_uri = conn_info.stdout.decode('ascii').strip()
         conn = sqlalchemy.create_engine(conn_uri)
         df_final.to_sql(ScrapeJob._meta.db_table, con = conn, if_exists = "append", index=False, index_label=None, method=None)
