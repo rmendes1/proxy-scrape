@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 #os.environ.get('SECRET_KEY')
 #'django-insecure-rxh+2ry=4tizo@htr7sf#m%04%3v+)l5fsfc-8o7$3n#ho6r&n'
-#SECRET_KEY = os.getenv("SECRET_KEY")
+#HEROK = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -132,5 +132,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+HEROKU_API_KEY = os.environ["HEROKU_API_KEY"]
 
 django_heroku.settings(locals())
