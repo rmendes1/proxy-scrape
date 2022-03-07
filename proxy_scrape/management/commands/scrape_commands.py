@@ -22,4 +22,4 @@ class Command(BaseCommand):
         df_final.columns = ['ip', 'port', 'protocol', 'country', 'region', 'city', 'anonymity', 'speed', 'uptime', 'response', 'last_checked']
 
         conn = sqlalchemy.create_engine('sqlite:///db.sqlite3')
-        df_final.to_sql(ScrapeJob._meta.db_table, con = conn, if_exists = "append", index=False, index_label=None, method=None)
+        return df_final.to_sql(ScrapeJob._meta.db_table, con = conn, if_exists = "append", index=False, index_label=None, method=None)
