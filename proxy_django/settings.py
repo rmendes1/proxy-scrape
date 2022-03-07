@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY') #django-insecure-rxh+2ry=4tizo@htr7sf#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://proxy-scrape-app.herokuapp.com/']
+ALLOWED_HOSTS = ['proxy-scrape-app.herokuapp.com']
 
 
 # Application definition
