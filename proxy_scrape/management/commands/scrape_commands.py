@@ -24,8 +24,7 @@ class Command(BaseCommand):
 
         heroku_app_name = "scrape-proxy"
         raw_db_url = subprocess.run(["heroku", "config:get", "DATABASE_URL", "--app", heroku_app_name],
-                                    capture_output=True  # capture_output arg is added in Python 3.7
-                                    ).stdout 
+                                    capture_output=True).stdout # capture_output arg is added in Python 3.7
         db_url = raw_db_url.decode("ascii").strip()
         final_db_url = "postgresql+psycopg2://" + db_url.lstrip("postgres://")  # lstrip() is more suitable here than replace() function since we only want to replace postgres at the start!
         conn = sqlalchemy.create_engine(final_db_url)
