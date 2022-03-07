@@ -1,2 +1,2 @@
-web: gunicorn proxy_scrape.wsgi
+web: gunicorn proxy_django.wsgi
 release: python manage.py migrate
