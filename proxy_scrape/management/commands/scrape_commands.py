@@ -9,7 +9,7 @@ import subprocess
 
 class Command(BaseCommand):
     help = "collect jobs"
-    # define logic of command
+    # define logic of commands
     def handle(self, *args, **options):
         header = {'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'}
         # collect html
@@ -24,7 +24,8 @@ class Command(BaseCommand):
         df_final.columns = ['ip', 'port', 'protocol', 'country', 'region', 'city', 'anonymity', 'speed', 'uptime', 'response', 'last_checked']
 
         HEROKU_APP_NAME = "scrape-proxy"
-        conn_info = subprocess.run(["heroku", "config:get", "DATABASE_URL", "--a", HEROKU_APP_NAME], capture_output=True).stdout # capture_output arg is added in Python 3.7
-        conn_uri = conn_info.stdout.decode('ascii').strip()
-        conn = sqlalchemy.create_engine(conn_uri)
+        raw_db_url = subprocess.run(["heroku", "config:get", "DATABASE_URL", "--a", HEROKU_APP_NAME], capture_output=True).stdout # capture_output arg is added in Python 3.7
+        db_url = raw_db_url.decode('ascii').strip()
+        final_db_url = "postgresql+psycopg2://" + db_url.lstrip("postgres://")
+        conn = sqlalchemy.create_engine(final_db_url)
         df_final.to_sql(ScrapeJob._meta.db_table, con = conn, if_exists = "append", index=False, index_label=None, method=None)
