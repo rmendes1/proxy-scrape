@@ -3,7 +3,7 @@
 </h2>
 
 <p align="center">
- <img alt="Repository size" src="https://img.shields.io/github/repo-size/rmendes1/proxy-scrape">
+<img alt="Repository size" src="https://img.shields.io/github/repo-size/rmendes1/proxy-scrape">
 	
 <a href="https://github.com/rmendes1/proxy-scrape/commits/main">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/rmendes1/proxy-scrape">
