@@ -4,9 +4,9 @@
 
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/rmendes1/rossmann_sales?color=%2304D361">
-   <img alt="Repository size" src="https://img.shields.io/github/repo-size/rmendes1/rossmann_sales">
-    <a href="https://github.com/rmendes1/house-rocket/commits/main">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/rmendes1/rossmann_sales">
+   <img alt="Repository size" src="https://img.shields.io/github/repo-size/rmendes1/proxy-scrape">
+    <a href="https://github.com/rmendes1/proxy-scrape/commits/main">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/rmendes1/proxy-scrape">
   </a>
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
@@ -79,10 +79,10 @@ Inside the table, the IP Address came as an encoded value, so it was necessary t
 the values and <code class="lo lp lq lr ls b">base64</code> lib helped to decode them into valid IP addresses.
 
 <p align = "center"> Image 1 - Dirty Data </p>
-<p align = "center"> <img src="/figs/encoded_ip.png" />  </p>
+<p align = "center"> <img src="/imgs/encoded_ip.png" />  </p>
 
 <p align = "center"> Image 2 - Cleaned Data IPs </p>
-<p align = "center"> <img src="/figs/decoded_ip.png" />  </p>
+<p align = "center"> <img src="/imgs/decoded_ip.png" />  </p>
 
 
 # **Pages**
@@ -90,13 +90,13 @@ With the aim of this project being to display the data tables and perform CRUD o
 a forms to add/update new pieces of information to it.
 
 <p align = "center"> Image 3 - Index Page </p>
-<p align = "center"> <img src="/figs/index_page.png" />  </p>
+<p align = "center"> <img src="/imgs/index_page.png" />  </p>
 
 <p align = "center"> Image 4 - Forms (ADD) </p>
-<p align = "center"> <img src="/figs/forms_add.png" />  </p>
+<p align = "center"> <img src="/imgs/forms_page.png" />  </p>
 
 <p align = "center"> Image 5 - Forms (UPDATE) </p>
-<p align = "center"> <img src="/figs/forms_update.png" />  </p>
+<p align = "center"> <img src="/imgs/forms_update.png" />  </p>
 
 
 # **Deploy**
@@ -116,7 +116,7 @@ Database in production is clean and contains only new info.
 Some methods that I think might work:
 - Create a local PSQL database and connect with Heroku's PSQL to upload the data
 - Generate via code the command to retrieve Heroku's Postgres URL, which is one of the environment variables set. I tried to use <code class="lo lp lq lr ls b">subprocess</code>
-and decode to create a SQLAlchemy engine but I coudn't manage to make it work. The code for that can be found <a href = '#'>here</a>
+and decode to create a SQLAlchemy engine but I coudn't manage to make it work. The code for that can be found <a href = 'https://github.com/rmendes1/proxy-scrape/blob/main/proxy_scrape/management/commands/scrape_commands_production.py'>here</a>
 
 # **License**
 
