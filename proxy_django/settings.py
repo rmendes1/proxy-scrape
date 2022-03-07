@@ -22,12 +22,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY') #django-insecure-rxh+2ry=4tizo@htr7sf#m%04%3v+)l5fsfc-8o7$3n#ho6r&n'
+#os.environ.get('SECRET_KEY')
+SECRET_KEY = 'django-insecure-rxh+2ry=4tizo@htr7sf#m%04%3v+)l5fsfc-8o7$3n#ho6r&n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['proxy-scrape-app.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -122,7 +123,6 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = 'static/'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
