@@ -1,3 +1,2 @@
-web: python manage.py runserver 0.0.0.0:$PORT
+web: gunicorn proxy_scrape.wsgi
 release: python manage.py migrate
-release: python manage.py scrape_commands
