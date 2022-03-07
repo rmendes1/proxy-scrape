@@ -3,14 +3,16 @@
 </h2>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/rmendes1/rossmann_sales?color=%2304D361">
-   <img alt="Repository size" src="https://img.shields.io/github/repo-size/rmendes1/proxy-scrape">
-    <a href="https://github.com/rmendes1/proxy-scrape/commits/main">
+ <img alt="Repository size" src="https://img.shields.io/github/repo-size/rmendes1/proxy-scrape">
+	
+  
+  <a href="https://github.com/rmendes1/proxy-scrape/commits/main">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/rmendes1/proxy-scrape">
   </a>
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
+
 
 
 # Table of Contents
@@ -100,10 +102,11 @@ a forms to add/update new pieces of information to it.
 
 
 # **Deploy**
-Heroku Cloud was used to deploy this project, as it requires simple settings and generates a direct web access to the project.
 <a href="https://proxy-scrape.herokuapp.com/proxy/">
   <img alt="Made by rmendes1" src="https://img.shields.io/badge/Access%20Page%20-Heroku-%2304D361">
-</a>
+</a> <br>
+Heroku Cloud was used to deploy this project, as it requires simple settings and generates a direct web access to the project.
+
 
 # **Next Steps**
 
@@ -114,9 +117,9 @@ That is because I had been using SQLAlchemy to create the engine connection and 
 Database in production is clean and contains only new info.
 
 Some methods that I think might work:
-- Create a local PSQL database and connect with Heroku's PSQL to upload the data
+- Create a local PSQL database and connect with Heroku's PSQL to upload the data;
 - Generate via code the command to retrieve Heroku's Postgres URL, which is one of the environment variables set. I tried to use <code class="lo lp lq lr ls b">subprocess</code>
-and decode to create a SQLAlchemy engine but I coudn't manage to make it work. The code for that can be found <a href = 'https://github.com/rmendes1/proxy-scrape/blob/main/proxy_scrape/management/commands/scrape_commands_production.py'>here</a>
+and decode to create a SQLAlchemy engine but I coudn't manage to make it work. The code for that can be found <a href = 'https://github.com/rmendes1/proxy-scrape/blob/main/proxy_scrape/management/commands/scrape_commands_production.py'>here</a>.
 
 # **License**
 
