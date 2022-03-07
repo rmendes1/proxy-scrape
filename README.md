@@ -89,7 +89,7 @@ the values and <code class="lo lp lq lr ls b">base64</code> lib helped to decode
 
 # **Pages**
 With the aim of this project being to display the data tables and perform CRUD operations, only 2 pages were needed. An index with the list of items and
-a forms to add/update new pieces of information to it.
+a forms to add/update new pieces of information to it. It is also possible to order the rows by the desired value.
 
 <p align = "center"> Image 3 - Index Page </p>
 <p align = "center"> <img src="/imgs/index_page.png" />  </p>
